@@ -24,11 +24,11 @@ function NewPlantForm({ onAddPlant }) {
       return;
     }
 
-    // Create new plant object with proper price format
+    // Create new plant object with price as string to match test expectations
     const newPlant = {
       name: formData.name,
       image: formData.image,
-      price: parseFloat(formData.price)
+      price: formData.price
     };
 
     // Call the onAddPlant function passed down from parent

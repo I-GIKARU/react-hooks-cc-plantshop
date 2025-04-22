@@ -13,7 +13,7 @@ function PlantPage() {
 
   // Fetch all plants from the API
   const fetchPlants = () => {
-    fetch("http://localhost:3000/plants")
+    fetch("http://localhost:6001/plants")
       .then((r) => r.json())
       .then((plantsData) => setPlants(plantsData))
       .catch((error) => console.error("Error fetching plants:", error));
@@ -21,10 +21,10 @@ function PlantPage() {
 
   // Add a new plant to the database
   const handleAddPlant = (newPlant) => {
-    fetch("http://localhost:3000/plants", {
+    fetch("http://localhost:6001/plants", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "Application/JSON",
       },
       body: JSON.stringify(newPlant),
     })
